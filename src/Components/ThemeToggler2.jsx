@@ -5,7 +5,7 @@ const ThemeToggler = () => {
   const [theme, setTheme] = useContext(ThemeContext2);
   return (
     <div>
-      <button
+      <button className="btn"
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
