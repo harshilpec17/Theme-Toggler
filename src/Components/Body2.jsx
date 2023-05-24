@@ -8,8 +8,8 @@ const HeroSection = () => {
 
   return (
     <div style={{ backgroundColor: currentTheme.backgroundColor }}>
-      <h1 style={{ color: currentTheme.textColor }}>I am learning</h1>
-      <h3 style={{color: currentTheme.textColor}}>Wish me luck</h3>
+      <h1 style={{ color: currentTheme.textColor, textAlign: "center"}}>I am learning</h1>
+      <h3 style={{color: currentTheme.textColor, textAlign:"center"}}>Wish me luck</h3>
     </div>
   );
 };
