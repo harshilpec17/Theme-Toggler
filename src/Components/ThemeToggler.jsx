@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ThemeContext from "../Context/ThemeContext2";
+import ThemeContext from "../Context/ThemeContext";
 
 const ThemeToggler = () => {
   const [themeMode, setThemeMode] = useContext(ThemeContext);

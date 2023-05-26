@@ -1,13 +1,9 @@
-import ThemeToggler from "./ThemeToggler";
-
 const Header = () => {
-return(
+  return (
     <header>
-        <h1>Theme Toggler</h1>
-        <ThemeToggler/>
+      <h1 style={{ textAlign: "center" }}>Theme Toggler</h1>
     </header>
-)
-
-}
+  );
+};
 
 export default Header;

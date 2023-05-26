@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext} from "react";
 import ThemeContext from "../Context/ThemeContext";
 import AppTheme from "../Colors"
 
 const HeroSection = () => {
     const theme = useContext(ThemeContext)[0]
     const currentTheme = AppTheme[theme]
+    const [buttonTheme, setButtonTheme] = useContext(ThemeContext)
 
     return (
         <div
@@ -17,7 +18,8 @@ const HeroSection = () => {
         >
             <h1>Context API theme toggler</h1>
             <p>This is nice paragraph</p>
-            <button
+            <button onClick={() => {setButtonTheme(buttonTheme === "light" ? "dark" : "light") }}
+
             style={{
                 backgroundColor: "#26ae60",
                 padding: "10px 150px",
@@ -25,10 +27,10 @@ const HeroSection = () => {
                 color: "#fff",
                 border: `${currentTheme.border}`
             }}
-            ></button>
+            >{buttonTheme === "light" ? "Dark Mode" : "Light Mode"}</button>
         </div>
     )
 
 }
 
-export default HeroSection
+export default HeroSection;

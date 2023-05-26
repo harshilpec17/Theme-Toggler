@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import {ThemeContext2} from './Context/ThemeContext2';
-import HeroSection from './Components/Body2';
+import ThemeContext from './Context/ThemeContext';
+import HeroSection from './Components/Body';
 import './App.css';
-import ThemeToggler2 from './Components/ThemeToggler2';
+import Header from './Components/Header';
 
 const App =  () => {
   const themeHook = useState("light")
   return (
-      <ThemeContext2.Provider value={themeHook}>
+      <ThemeContext.Provider value={themeHook}>
         <div>
-          <ThemeToggler2 />
+          <Header />
           <HeroSection />
         </div>
-      </ThemeContext2.Provider>
+      </ThemeContext.Provider>
   );
 }
 
